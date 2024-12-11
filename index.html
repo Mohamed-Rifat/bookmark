@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Mark</title>
+    <link rel="icon" href="images/2899445.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="w-75 mx-auto p-4 over">
+            <h2 class="my-5 position-relative fw-bold fst-italic text-center w-100">Book Marker</h2>
+        </div> 
+        <div class="p-4 mt-5 d-flex flex-column justify-content-center align-items-center ">
+            <h3 class="mb-4">
+              <i class="fa-solid fa-bookmark"></i>
+              Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark"></i>
+            </h3>
+            <div class="site-name w-100 d-flex flex-column justify-content-center mb-4">
+              <label for="bookmarkName" class="pb-2 fw-semibold mb-3">
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name</label>
+              <input type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName" oninput=validationName() >
+              <p id="msg-error" class="alert alert-danger p-2 my-2 d-none">Site name must contain at least 3 characters</p>
+            </div>
+            <div class="site-url w-100 d-flex flex-column justify-content-center ">
+              <label for="bookmarkURL" class="pb-2 fw-semibold mb-3">
+                <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+              <input type="url" placeholder="Website URL" class="form-control" id="bookmarkURL" oninput="validationUrl()">
+             <p id="url-error" class="alert alert-danger p-2 my-2 d-none"> url is not correct  ex. https://www.******.com </p>
+            </div>
+            <button class="btn btn-outline-success px-5 m-5" id="submitBtn">Submit</button>
+          </div>
+          <table class="table mt-4 text-center">
+            <thead>
+              <tr><th class="text-capitalize">index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </tr></thead>
+            <tbody id="infosites"></tbody>
+          </table>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
